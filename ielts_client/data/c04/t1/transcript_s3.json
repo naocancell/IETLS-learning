@@ -1,0 +1,352 @@
+{
+ "source": "asr",
+ "model": "faster-whisper small.en",
+ "note": "自动语音识别结果，未人工校对；以官方 Tapescript 为准。",
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 8.0,
+   "text": "Section 3. You'll hear Melanie, a student, talking to one of her lecturers about her studies."
+  },
+  {
+   "start": 8.0,
+   "end": 37.26,
+   "text": "First, you have some time to look at questions 21 to 27. Now listen carefully and answer questions 21 to 27."
+  },
+  {
+   "start": 37.26,
+   "end": 43.89,
+   "text": "Excuse me, Dr Johnson. May I speak to you for a minute?"
+  },
+  {
+   "start": 43.89,
+   "end": 45.89,
+   "text": "Sure. Come in."
+  },
+  {
+   "start": 45.89,
+   "end": 49.89,
+   "text": "I'm Melanie Griffin. I'm taking your course in population studies."
+  },
+  {
+   "start": 49.89,
+   "end": 53.89,
+   "text": "Right. Well, Melanie, how can I help you?"
+  },
+  {
+   "start": 53.89,
+   "end": 60.89,
+   "text": "I'm having a bit of trouble with a second assignment, and it's due in 12 days."
+  },
+  {
+   "start": 60.89,
+   "end": 65.89,
+   "text": "What sort of trouble are you having? Is the assignment question a problem?"
+  },
+  {
+   "start": 65.89,
+   "end": 72.89,
+   "text": "Well, that's part of the problem. I'm also having, I've been having trouble getting hold of the books."
+  },
+  {
+   "start": 72.89,
+   "end": 76.89,
+   "text": "I've been to the library several times, and all the books are out."
+  },
+  {
+   "start": 76.89,
+   "end": 79.89,
+   "text": "Sounds like you should have started borrowing books a bit earlier."
+  },
+  {
+   "start": 79.89,
+   "end": 88.89,
+   "text": "Well, I had a really big assignment due in for another course, and I've been spending all my time on that, and I thought..."
+  },
+  {
+   "start": 88.89,
+   "end": 92.89,
+   "text": "You might get an extension of time to finish your assignment for me?"
+  },
+  {
+   "start": 92.89,
+   "end": 96.89,
+   "text": "If that's possible, but I don't know..."
+  },
+  {
+   "start": 96.89,
+   "end": 104.89,
+   "text": "Well, yes, it is possible, but extensions are normally given only for medical or compassionate reasons."
+  },
+  {
+   "start": 104.89,
+   "end": 108.89,
+   "text": "Otherwise, it's really a question of organizing your study."
+  },
+  {
+   "start": 108.89,
+   "end": 115.89,
+   "text": "And we don't like giving extensions to students who simply didn't plan their work properly."
+  },
+  {
+   "start": 115.89,
+   "end": 117.89,
+   "text": "What did you get for your first assignment?"
+  },
+  {
+   "start": 117.89,
+   "end": 119.89,
+   "text": "I got 87%."
+  },
+  {
+   "start": 119.89,
+   "end": 123.89,
+   "text": "Hmm. Yes, you did very well, indeed."
+  },
+  {
+   "start": 123.89,
+   "end": 126.89,
+   "text": "So, obviously, you can produce good work."
+  },
+  {
+   "start": 126.89,
+   "end": 133.89,
+   "text": "I don't think I'll need too much extra time, as long as I can get hold of some of the important references."
+  },
+  {
+   "start": 133.89,
+   "end": 140.89,
+   "text": "Well, since you did so well in your first assignment, I'm prepared to give you an extra two weeks for this one."
+  },
+  {
+   "start": 140.89,
+   "end": 144.89,
+   "text": "So, that'll mean you'll need to submit it about a month from now."
+  },
+  {
+   "start": 144.89,
+   "end": 146.89,
+   "text": "Oh, thank you."
+  },
+  {
+   "start": 146.89,
+   "end": 151.89,
+   "text": "Now, what about the reading materials? Have you checked out the journal articles in the list?"
+  },
+  {
+   "start": 151.89,
+   "end": 161.89,
+   "text": "Um, no, not yet. There were about 20 of them, and I wasn't sure which ones would be most useful or important."
+  },
+  {
+   "start": 161.89,
+   "end": 168.89,
+   "text": "Well, they're all useful. But I don't expect anyone to read them all, because a number of them deal with the same issues."
+  },
+  {
+   "start": 168.89,
+   "end": 171.89,
+   "text": "Let me give you some suggestions."
+  },
+  {
+   "start": 171.89,
+   "end": 175.89,
+   "text": "The article by Anderson and Hawker is really worth reading."
+  },
+  {
+   "start": 175.89,
+   "end": 177.89,
+   "text": "Right. I'll read that one."
+  },
+  {
+   "start": 177.89,
+   "end": 180.89,
+   "text": "You should also read the article by Jackson."
+  },
+  {
+   "start": 180.89,
+   "end": 184.89,
+   "text": "But just look at the part in the research methodology, how they did it."
+  },
+  {
+   "start": 184.89,
+   "end": 188.89,
+   "text": "Okay. Jackson. Got that."
+  },
+  {
+   "start": 188.89,
+   "end": 194.89,
+   "text": "And if you have time, the one by Roberts says very relevant things, although it's not essential."
+  },
+  {
+   "start": 194.89,
+   "end": 199.89,
+   "text": "So, okay. If it's useful, I'll try and read that one."
+  },
+  {
+   "start": 199.89,
+   "end": 205.89,
+   "text": "Now, the one by Morris. I wouldn't bother with that at this stage, if I were you."
+  },
+  {
+   "start": 205.89,
+   "end": 208.89,
+   "text": "Okay. I won't bother with Morris."
+  },
+  {
+   "start": 208.89,
+   "end": 212.89,
+   "text": "Oh, now, someone told me the article by Cooper is important."
+  },
+  {
+   "start": 212.89,
+   "end": 214.89,
+   "text": "Well, yes, in a way."
+  },
+  {
+   "start": 214.89,
+   "end": 219.89,
+   "text": "But just look at the last part, where he discusses the research results."
+  },
+  {
+   "start": 219.89,
+   "end": 224.89,
+   "text": "And, lastly, there's Forster. I can't think why I included that one."
+  },
+  {
+   "start": 224.89,
+   "end": 230.89,
+   "text": "It's not bad, and could be of some help, but not that much."
+  },
+  {
+   "start": 230.89,
+   "end": 260.26,
+   "text": "Before you hear the rest of the conversation, you have some time to look at questions 28 to 30."
+  },
+  {
+   "start": 260.26,
+   "end": 264.26,
+   "text": "Now listen and answer questions 28 to 30."
+  },
+  {
+   "start": 264.26,
+   "end": 271.36,
+   "text": "Now, let's deal with the assignment question. What's the problem there?"
+  },
+  {
+   "start": 271.36,
+   "end": 274.36,
+   "text": "It's the graph on page two."
+  },
+  {
+   "start": 274.36,
+   "end": 279.36,
+   "text": "Well, it seems to be the problem. It's just the bar graph showing reasons why people change where they live."
+  },
+  {
+   "start": 279.36,
+   "end": 283.36,
+   "text": "Well, I've got a photocopy, but the reasons at the bottom are missing."
+  },
+  {
+   "start": 283.36,
+   "end": 288.36,
+   "text": "Oh, okay. Look at the first bar on the graph."
+  },
+  {
+   "start": 288.36,
+   "end": 293.36,
+   "text": "Now, that indicates the number of people who move because they want more space."
+  },
+  {
+   "start": 293.36,
+   "end": 300.36,
+   "text": "Oh, I see. Bar one. Okay. Now, what about the next bar?"
+  },
+  {
+   "start": 300.36,
+   "end": 304.36,
+   "text": "Bar two is to do with the people living nearby, disturbing them."
+  },
+  {
+   "start": 304.36,
+   "end": 308.36,
+   "text": "So, they chose to move away to somewhere quieter."
+  },
+  {
+   "start": 308.36,
+   "end": 310.36,
+   "text": "Now, let's look at bar number three."
+  },
+  {
+   "start": 310.36,
+   "end": 316.36,
+   "text": "Another reason people change their place of living is because they want to be closer to the city."
+  },
+  {
+   "start": 316.36,
+   "end": 320.36,
+   "text": "Okay. Proximity to the city is an issue."
+  },
+  {
+   "start": 321.36,
+   "end": 328.36,
+   "text": "Now, bar number four refers to problems when the owner of the property won't help fix things that go wrong."
+  },
+  {
+   "start": 328.36,
+   "end": 333.36,
+   "text": "In other words, the owner is not helpful and so the tenants move out."
+  },
+  {
+   "start": 333.36,
+   "end": 336.36,
+   "text": "Okay. Now, what about bar five?"
+  },
+  {
+   "start": 336.36,
+   "end": 344.36,
+   "text": "Bar five is about those people who move because they need a bus or train to get them into the city or to go to work."
+  },
+  {
+   "start": 344.36,
+   "end": 347.36,
+   "text": "Okay. And bar six?"
+  },
+  {
+   "start": 347.36,
+   "end": 349.36,
+   "text": "Bar number six is interesting."
+  },
+  {
+   "start": 349.36,
+   "end": 352.36,
+   "text": "That reason was given quite a lot."
+  },
+  {
+   "start": 352.36,
+   "end": 356.36,
+   "text": "People moving because they wanted to be in a more attractive neighborhood."
+  },
+  {
+   "start": 356.36,
+   "end": 359.36,
+   "text": "Oh, yes. Thank you very much."
+  },
+  {
+   "start": 359.36,
+   "end": 365.05,
+   "text": "That is the end of section three."
+  },
+  {
+   "start": 365.05,
+   "end": 369.05,
+   "text": "You now have half a minute to check your answers."
+  },
+  {
+   "start": 369.05,
+   "end": 400.46,
+   "text": "Now turn to section four."
+  }
+ ]
+}

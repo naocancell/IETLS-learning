@@ -1,0 +1,207 @@
+{
+ "source": "asr",
+ "model": "faster-whisper small.en",
+ "note": "自动语音识别结果，未人工校对；以官方 Tapescript 为准。",
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 7.12,
+   "text": "Section 4. You'll hear a talk on the subject of the urban landscape. First, you have some"
+  },
+  {
+   "start": 7.12,
+   "end": 54.32,
+   "text": "time to look at questions 31 to 40. Now listen carefully and answer questions 31 to 40."
+  },
+  {
+   "start": 54.32,
+   "end": 62.31,
+   "text": "Good day, ladies and gentlemen. I have been asked today to talk to you about the urban"
+  },
+  {
+   "start": 62.31,
+   "end": 69.21,
+   "text": "landscape. There are two major areas that I will focus on in my talk. How vegetation can"
+  },
+  {
+   "start": 69.21,
+   "end": 75.49,
+   "text": "have a significant effect on urban climate and how we can better plan our cities using"
+  },
+  {
+   "start": 75.49,
+   "end": 81.95,
+   "text": "trees to provide a more comfortable environment for us to live in. Trees can have a significant"
+  },
+  {
+   "start": 81.95,
+   "end": 89.41,
+   "text": "impact on our cities. They can make a city as a whole a bit less windy or a bit more windy"
+  },
+  {
+   "start": 89.41,
+   "end": 94.59,
+   "text": "if that's what you want. They can make it a bit cooler if it's a hot summer day in an"
+  },
+  {
+   "start": 94.59,
+   "end": 102.11,
+   "text": "Australian city or they can make it a bit more humid if it's a dry inland city. On the"
+  },
+  {
+   "start": 102.11,
+   "end": 108.91,
+   "text": "local scale, that is in particular areas within the city, trees can make the local area more"
+  },
+  {
+   "start": 108.91,
+   "end": 118.59,
+   "text": "shady, cooler, more humid and much less windy. In fact, trees and planting of various kinds"
+  },
+  {
+   "start": 118.59,
+   "end": 125.03,
+   "text": "can be used to make city streets actually less dangerous in particular areas. How do"
+  },
+  {
+   "start": 125.03,
+   "end": 134.15,
+   "text": "trees do all that you ask? Well, the main difference between a tree and a building is a tree has"
+  },
+  {
+   "start": 134.15,
+   "end": 140.95,
+   "text": "got an internal mechanism to keep the temperature regulated. It evaporates water through its"
+  },
+  {
+   "start": 140.95,
+   "end": 146.67,
+   "text": "leaves and that means that the temperature of the leaves is never very far from our"
+  },
+  {
+   "start": 146.67,
+   "end": 153.59,
+   "text": "own body temperature. The temperature of a building surface on a hot sunny day can easily"
+  },
+  {
+   "start": 153.59,
+   "end": 161.43,
+   "text": "be 20 degrees more than our temperature. Trees, on the other hand, remain cooler than buildings"
+  },
+  {
+   "start": 161.43,
+   "end": 168.69,
+   "text": "because they sweat. This means that they can humidify the air and cool it, a property"
+  },
+  {
+   "start": 168.69,
+   "end": 179.44,
+   "text": "which can be exploited to improve the local climate. This can also help break the force"
+  },
+  {
+   "start": 179.44,
+   "end": 186.44,
+   "text": "of winds. The reason that high buildings make it windier at ground level is that as the"
+  },
+  {
+   "start": 186.44,
+   "end": 193.52,
+   "text": "wind goes higher and higher, it goes faster and faster. When the wind hits the building,"
+  },
+  {
+   "start": 193.52,
+   "end": 198.92,
+   "text": "it has to go somewhere, some of it goes over the top and some goes around the sides"
+  },
+  {
+   "start": 198.92,
+   "end": 205.08,
+   "text": "of the building, forcing those high level winds down to ground level. That doesn't"
+  },
+  {
+   "start": 205.08,
+   "end": 212.24,
+   "text": "happen when you have trees. Trees filter the wind and considerably reduce it, preventing"
+  },
+  {
+   "start": 212.24,
+   "end": 219.52,
+   "text": "those very large strong gusts that you so often find around tall buildings. Another problem"
+  },
+  {
+   "start": 219.52,
+   "end": 226.48,
+   "text": "in built up areas is that traffic noise is intensified by tall buildings. By planting"
+  },
+  {
+   "start": 226.48,
+   "end": 232.28,
+   "text": "a belt of trees at the side of the road, you can make things a little quieter but"
+  },
+  {
+   "start": 232.28,
+   "end": 238.72,
+   "text": "much of the vehicle noise still goes through the trees. Trees can also help reduce the amount"
+  },
+  {
+   "start": 238.72,
+   "end": 245.36,
+   "text": "of noise in the surroundings, although the effect is not as large as people like to think."
+  },
+  {
+   "start": 245.36,
+   "end": 251.82,
+   "text": "Low frequency noise in particular just goes through the trees as though they aren't there."
+  },
+  {
+   "start": 251.82,
+   "end": 256.88,
+   "text": "Although trees can significantly improve the local climate, they do however take up a"
+  },
+  {
+   "start": 256.88,
+   "end": 264.88,
+   "text": "lot of space. There are root systems to consider and branches blocking windows and so on. It may"
+  },
+  {
+   "start": 264.88,
+   "end": 270.64,
+   "text": "therefore be difficult to fit trees into the local landscape. There is not a great deal you"
+  },
+  {
+   "start": 270.64,
+   "end": 277.2,
+   "text": "can do if you have what we call a street canyon, a whole set of high rises enclosed in a narrow"
+  },
+  {
+   "start": 277.2,
+   "end": 286.2,
+   "text": "street. Trees need water to grow, they also need some sunlight to grow and you need room to put"
+  },
+  {
+   "start": 286.2,
+   "end": 293.16,
+   "text": "them. If you have the chance of knocking buildings down and replacing them, then suddenly you can"
+  },
+  {
+   "start": 293.16,
+   "end": 297.28,
+   "text": "start looking at different ways to design the streets and to introduce trees."
+  },
+  {
+   "start": 297.28,
+   "end": 338.16,
+   "text": "That is the end of section 4. You now have half a minute to check your answers. That is"
+  },
+  {
+   "start": 338.16,
+   "end": 347.55,
+   "text": "the end of the listening test. In the IELTS test you would now have 10 minutes to transfer"
+  },
+  {
+   "start": 347.55,
+   "end": 349.95,
+   "text": "your answers to the listening answer sheet."
+  }
+ ]
+}

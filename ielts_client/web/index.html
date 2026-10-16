@@ -3,298 +3,100 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IELTS Master - 剑桥雅思全真机考与精听精读客户端</title>
+  <title>IELTS Master - 剑桥雅思机考模拟与练习</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%23c8102e%27/%3E%3Ctext x=%2716%27 y=%2722%27 font-size=%2716%27 font-family=%27Arial%27 font-weight=%27700%27 fill=%27white%27 text-anchor=%27middle%27%3EI%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/exam_data.js"></script>
 </head>
-<body class="bg-gray-100 text-gray-800 font-sans select-text h-screen flex flex-col overflow-hidden">
-
-  <!-- 顶部主控制栏 -->
-  <header class="bg-slate-900 text-white flex items-center justify-between px-6 py-2.5 shadow-md shrink-0 border-b border-slate-800">
-    <!-- 左侧：系统标题与模式切换 -->
-    <div class="flex items-center space-x-6">
-      <div class="flex items-center space-x-2">
-        <span class="bg-red-600 text-white font-black text-sm px-2 py-0.5 rounded tracking-wider">IELTS</span>
-        <span class="font-bold text-lg text-slate-100 tracking-wide">CD-Master</span>
-        <span class="text-xs bg-slate-800 text-slate-400 px-2 py-0.5 rounded border border-slate-700">剑桥真题 4 Test 1</span>
-      </div>
-
-      <!-- 模式切换选择器 -->
-      <div class="flex items-center bg-slate-800 p-1 rounded-lg border border-slate-700 text-xs">
-        <button id="btn-mode-mock" onclick="switchAppMode('mock')" class="px-3 py-1.5 rounded-md font-medium transition-all flex items-center space-x-1.5 bg-red-600 text-white shadow-sm">
-          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-          <span>🎯 全真模考模式</span>
-        </button>
-        <button id="btn-mode-study" onclick="switchAppMode('study')" class="px-3 py-1.5 rounded-md font-medium transition-all flex items-center space-x-1.5 text-slate-300 hover:text-white">
-          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-          <span>📖 日常刷题与精听精读</span>
-        </button>
-      </div>
-
-      <!-- 科目切换按钮 (听力 / 阅读) -->
-      <div class="flex items-center space-x-2 border-l border-slate-700 pl-4">
-        <button id="tab-listening" onclick="switchModule('listening')" class="px-3 py-1 text-xs font-semibold rounded bg-amber-500 text-slate-950 shadow">
-          🎧 听力 (Listening)
-        </button>
-        <button id="tab-reading" onclick="switchModule('reading')" class="px-3 py-1 text-xs font-semibold rounded bg-slate-800 text-slate-300 hover:bg-slate-700">
-          📚 阅读 (Reading)
-        </button>
-      </div>
+<body class="font-m">
+  <header class="topbar">
+    <div class="brand"><span class="logo">IELTS</span><span class="brand-name">Master</span></div>
+    <label class="test-picker">
+      <span class="sr">选择套题</span>
+      <select id="test-select" title="选择套题"></select>
+    </label>
+    <div class="seg" id="module-seg" role="tablist">
+      <button data-module="listening">听力 Listening</button>
+      <button data-module="reading">阅读 Reading</button>
     </div>
-
-    <!-- 中间：模考倒计时 / 练习计时 -->
-    <div class="flex items-center space-x-3 bg-slate-950 px-4 py-1 rounded-full border border-slate-800">
-      <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-      <span class="text-xs text-slate-400" id="timer-label">考试倒计时:</span>
-      <span class="font-mono text-base font-bold text-amber-400 tracking-wider" id="exam-timer">30:00</span>
-      <button id="btn-timer-pause" onclick="toggleTimer()" class="text-xs text-slate-400 hover:text-white underline ml-1 hidden">暂停</button>
+    <div class="seg" id="mode-seg" role="tablist">
+      <button data-mode="mock">全真模考</button>
+      <button data-mode="study">日常练习</button>
     </div>
-
-    <!-- 右侧：音量、全屏与交卷 -->
-    <div class="flex items-center space-x-4">
-      <!-- 音量调节 -->
-      <div class="flex items-center space-x-2 text-xs text-slate-300">
-        <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
-        <input type="range" id="volume-slider" min="0" max="1" step="0.05" value="0.8" class="w-16 accent-amber-500 cursor-pointer" oninput="changeVolume(this.value)">
-      </div>
-
-      <!-- 快速清空/重做 -->
-      <button onclick="resetAnswers()" class="text-xs text-slate-400 hover:text-red-400 transition" title="清空所有已填答案">清空答题</button>
-
-      <!-- 交卷按钮 -->
-      <button id="btn-submit" onclick="submitExam()" class="bg-red-600 hover:bg-red-700 text-white font-bold text-xs px-4 py-1.5 rounded shadow transition flex items-center space-x-1">
-        <span>交卷判分</span>
-        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-      </button>
+    <div class="spacer"></div>
+    <div class="timer" id="timer">
+      <span id="timer-label">--</span>
+      <b id="timer-value">--:--</b>
+      <button class="btn tiny ghost" id="btn-timer-pause" hidden>暂停</button>
     </div>
+    <button class="btn ghost" id="btn-font" title="字号">A<small>A</small></button>
+    <button class="btn ghost" id="btn-history">历史成绩</button>
+    <button class="btn primary" id="btn-submit">交卷</button>
   </header>
 
-  <!-- 刷题/精听模式专用控制器条 (仅在 study 模式显示) -->
-  <div id="study-control-bar" class="bg-indigo-950 text-indigo-100 px-6 py-2 flex items-center justify-between border-b border-indigo-900 shrink-0 text-xs hidden shadow-inner">
-    <!-- 听力播放控制组 -->
-    <div class="flex items-center space-x-3">
-      <span class="font-bold text-indigo-300 flex items-center space-x-1">
-        <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path></svg>
-        <span>精听控制器:</span>
-      </span>
-
-      <!-- 播放/暂停 -->
-      <button id="btn-play-pause" onclick="toggleAudioPlay()" class="bg-indigo-600 hover:bg-indigo-500 text-white px-3 py-1 rounded font-semibold flex items-center space-x-1">
-        <span id="play-pause-icon">▶ 播放</span>
-      </button>
-
-      <!-- 快退 5s / 快进 10s -->
-      <button onclick="seekAudio(-5)" class="bg-indigo-900 hover:bg-indigo-800 px-2.5 py-1 rounded border border-indigo-700">↺ -5秒</button>
-      <button onclick="seekAudio(10)" class="bg-indigo-900 hover:bg-indigo-800 px-2.5 py-1 rounded border border-indigo-700">↻ +10秒</button>
-
-      <!-- 进度条 -->
-      <div class="flex items-center space-x-2">
-        <span id="audio-cur-time" class="font-mono text-slate-300">00:00</span>
-        <input type="range" id="audio-seek-slider" min="0" max="100" value="0" step="0.5" class="w-48 accent-amber-400 cursor-pointer" oninput="onSeekSliderChange(this.value)">
-        <span id="audio-total-time" class="font-mono text-slate-400">--:--</span>
-      </div>
-
-      <!-- 倍速控制 -->
-      <div class="flex items-center space-x-1 pl-2">
-        <span class="text-indigo-300">倍速:</span>
-        <select id="playback-rate" onchange="changePlaybackRate(this.value)" class="bg-indigo-900 text-white px-1.5 py-0.5 rounded border border-indigo-700 text-xs">
-          <option value="0.75">0.75x</option>
-          <option value="1.0" selected>1.0x (正常)</option>
-          <option value="1.25">1.25x</option>
-          <option value="1.5">1.5x</option>
+  <div class="playerbar" id="playerbar" hidden>
+    <div class="pb-study" id="pb-study">
+      <button class="btn small" id="pb-play">▶ 播放</button>
+      <button class="btn small ghost" data-seek="-5">−5s</button>
+      <button class="btn small ghost" data-seek="5">+5s</button>
+      <span class="pb-time" id="pb-cur">00:00</span>
+      <input type="range" id="pb-seek" min="0" max="1000" value="0" aria-label="进度">
+      <span class="pb-time" id="pb-dur">00:00</span>
+      <label class="pb-field">倍速
+        <select id="pb-rate">
+          <option value="0.75">0.75x</option><option value="0.9">0.9x</option><option value="1" selected>1.0x</option>
+          <option value="1.1">1.1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option>
         </select>
-      </div>
-    </div>
-
-    <!-- 右侧：录音原文展开开关与即时核对开关 -->
-    <div class="flex items-center space-x-3">
-      <label class="flex items-center space-x-1.5 cursor-pointer">
-        <input type="checkbox" id="chk-auto-check" class="rounded text-amber-500 focus:ring-0 cursor-pointer" checked>
-        <span>单题即时核对 (Check Answer)</span>
       </label>
-      <button id="btn-toggle-transcript" onclick="toggleTranscriptPanel()" class="bg-indigo-800 hover:bg-indigo-700 text-white px-3 py-1 rounded border border-indigo-600 font-medium flex items-center space-x-1">
-        <span>📜 展开听力录音中英原文</span>
-      </button>
+      <button class="btn small ghost" id="pb-ab" title="AB 段循环：第一次点击设 A 点，第二次设 B 点，第三次取消">AB 循环</button>
+      <button class="btn small ghost" id="pb-transcript">📜 原文</button>
     </div>
+    <div class="pb-mock" id="pb-mock" hidden>
+      <span class="live-dot"></span><span id="pb-mock-text">等待开始</span>
+    </div>
+    <label class="pb-field vol">🔊<input type="range" id="pb-vol" min="0" max="1" step="0.05" value="1" aria-label="音量"></label>
+    <div class="pb-error" id="pb-error" hidden></div>
   </div>
 
-  <!-- 主体工作区 (两栏/多栏自适应布局) -->
-  <main class="flex-1 flex overflow-hidden relative" id="main-container">
-
-    <!-- 左侧区域：文章/试卷信息/精听原文 -->
-    <section id="left-pane" class="w-1/2 flex flex-col bg-white border-r border-gray-300 overflow-hidden relative">
-      <!-- 左栏顶部标签 -->
-      <div class="bg-gray-100 px-4 py-2 border-b border-gray-200 flex items-center justify-between text-xs text-gray-700 font-semibold shrink-0">
-        <div class="flex items-center space-x-2">
-          <span id="left-pane-badge" class="bg-blue-600 text-white px-2 py-0.5 rounded text-[11px]">Section 1</span>
-          <span id="left-pane-title" class="text-sm font-bold text-gray-900">Notes on Social Programme</span>
-        </div>
-        <div class="flex items-center space-x-2">
-          <span class="text-gray-400">选中文字即可高亮 (Highlight)</span>
-          <button onclick="clearTextHighlights()" class="text-red-600 hover:underline text-[11px]">清除高亮</button>
-        </div>
-      </div>
-
-      <!-- 左栏内容滚动容器 -->
-      <div id="left-pane-content" class="flex-1 overflow-y-auto p-6 space-y-4 text-gray-800 leading-relaxed text-sm select-text">
-        <!-- 动态注入文章内容或听力引导信息 -->
-      </div>
-
-      <!-- 选词高亮悬浮胶囊工具条 -->
-      <div id="highlight-toolbar" class="hidden absolute z-50 bg-slate-900 text-white text-xs px-2 py-1 rounded shadow-lg flex items-center space-x-2 border border-slate-700 pointer-events-auto">
-        <button onclick="applyHighlight()" class="hover:text-amber-300 flex items-center space-x-1">
-          <span class="w-2.5 h-2.5 bg-yellow-300 rounded-full inline-block"></span>
-          <span>高亮 (Highlight)</span>
-        </button>
-      </div>
-    </section>
-
-    <!-- 可拖拽分割线 -->
-    <div id="drag-resizer" class="w-1.5 bg-gray-200 hover:bg-blue-500 cursor-col-resize transition-colors shrink-0 z-10 flex items-center justify-center">
-      <div class="w-0.5 h-8 bg-gray-400 rounded-full"></div>
-    </div>
-
-    <!-- 右侧区域：答题区 -->
-    <section id="right-pane" class="flex-1 flex flex-col bg-gray-50 overflow-hidden">
-      <!-- 右栏顶部提示栏 -->
-      <div class="bg-white px-4 py-2 border-b border-gray-200 flex items-center justify-between text-xs font-semibold text-gray-700 shrink-0">
-        <span id="right-pane-instruction" class="text-gray-800">作答提示：请在下方各输入框中填入答案</span>
-        <div class="flex items-center space-x-2">
-          <span class="text-xs text-gray-500">已作答: <b id="answered-count" class="text-blue-600">0</b> / 40</span>
-        </div>
-      </div>
-
-      <!-- 题目滚动列表 -->
-      <div id="questions-container" class="flex-1 overflow-y-auto p-6 space-y-6">
-        <!-- 动态生成题目卡片 -->
-      </div>
-    </section>
-
-    <!-- 侧滑/抽屉式：听力录音中英精听面板 (默认隐藏) -->
-    <aside id="transcript-drawer" class="hidden absolute inset-y-0 right-0 w-2/5 bg-slate-900 text-slate-100 shadow-2xl z-40 flex flex-col border-l border-slate-700 animate-slide-left">
-      <div class="px-5 py-3.5 bg-slate-950 border-b border-slate-800 flex items-center justify-between">
-        <div class="flex items-center space-x-2">
-          <span class="text-amber-400 font-bold text-sm">📜 官方听力录音原文与考点定位</span>
-          <span class="text-xs bg-slate-800 text-slate-400 px-2 py-0.5 rounded">中英双语</span>
-        </div>
-        <button onclick="toggleTranscriptPanel()" class="text-slate-400 hover:text-white text-lg font-bold">✕</button>
-      </div>
-
-      <div class="px-4 py-2 bg-slate-800/80 text-xs text-slate-300 flex items-center justify-between border-b border-slate-700">
-        <span>💡 提示：点击高亮题号标签可直达对应题目</span>
-        <button onclick="toggleTranscriptLang()" id="btn-toggle-lang" class="text-amber-400 hover:underline">隐藏中文译文</button>
-      </div>
-
-      <div id="transcript-list" class="flex-1 overflow-y-auto p-5 space-y-4 text-xs leading-relaxed">
-        <!-- 动态注入录音文本与高亮句子 -->
-      </div>
-    </aside>
-
+  <main id="main" class="main">
+    <section id="pane-a" class="pane pane-a"></section>
+    <div id="resizer" class="resizer" title="拖动调整宽度"></div>
+    <section id="pane-b" class="pane pane-b"></section>
   </main>
 
-  <!-- 底部官方机考题号导航网格栏 -->
-  <footer class="bg-white border-t border-gray-300 px-6 py-2 shrink-0 flex flex-col space-y-1 shadow-lg">
-    <div class="flex items-center justify-between">
-      <!-- Section / Passage 切换 Tab -->
-      <div class="flex items-center space-x-2" id="part-tabs-container">
-        <!-- 动态生成 Part 1, Part 2, Part 3, Part 4 按钮 -->
-      </div>
-
-      <!-- 状态图例说明 -->
-      <div class="flex items-center space-x-4 text-[11px] text-gray-500">
-        <span class="flex items-center space-x-1"><span class="w-3 h-3 rounded bg-white border border-gray-400 inline-block"></span><span>未作答</span></span>
-        <span class="flex items-center space-x-1"><span class="w-3 h-3 rounded bg-blue-600 text-white inline-block"></span><span>已作答</span></span>
-        <span class="flex items-center space-x-1"><span class="w-3 h-3 rounded bg-yellow-400 border border-yellow-500 inline-block"></span><span>标记复查(Review)</span></span>
-      </div>
-
-      <!-- 上一题/下一题 快捷按钮 -->
-      <div class="flex items-center space-x-2 text-xs">
-        <button onclick="prevQuestion()" class="px-3 py-1 border border-gray-300 hover:bg-gray-100 rounded text-gray-700 font-medium">← 上一题</button>
-        <button onclick="nextQuestion()" class="px-3 py-1 bg-gray-800 hover:bg-gray-900 text-white rounded font-medium">下一题 →</button>
-      </div>
-    </div>
-
-    <!-- 40 道题的题号矩阵格子 -->
-    <div id="question-nav-grid" class="flex items-center space-x-1.5 overflow-x-auto py-1 scrollbar-thin">
-      <!-- 动态生成 1 到 40 的题号徽章 -->
+  <footer class="navbar">
+    <div class="nav-parts" id="nav-parts"></div>
+    <div class="nav-actions">
+      <button class="btn small ghost" id="btn-flag" title="标记当前题目，稍后复查">☆ 标记复查</button>
+      <button class="btn small ghost" id="btn-prev" title="上一题">‹</button>
+      <button class="btn small ghost" id="btn-next" title="下一题">›</button>
     </div>
   </footer>
 
-  <!-- 模态框：官方 9 分制成绩报告单 (交卷后弹出) -->
-  <div id="score-modal" class="hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-    <div class="bg-white rounded-xl shadow-2xl max-w-3xl w-full max-h-[90vh] flex flex-col overflow-hidden border border-gray-200 animate-scale-up">
-      <!-- 成绩单头部 -->
-      <div class="bg-slate-900 text-white px-6 py-4 flex items-center justify-between border-b border-slate-800">
-        <div class="flex items-center space-x-3">
-          <div class="bg-red-600 p-2 rounded-lg">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
-          </div>
-          <div>
-            <h2 class="text-lg font-bold">雅思全真机考成绩分析报告 (IELTS Test Report)</h2>
-            <p class="text-xs text-slate-400" id="report-subtext">剑桥雅思 4 - Test 1 客观题评分</p>
-          </div>
-        </div>
-        <button onclick="closeScoreModal()" class="text-slate-400 hover:text-white text-xl font-bold">✕</button>
-      </div>
+  <div class="overlay" id="overlay" hidden><div class="overlay-card" id="overlay-card"></div></div>
 
-      <!-- 得分摘要大卡片 -->
-      <div class="p-6 bg-slate-50 border-b border-gray-200 grid grid-cols-4 gap-4 text-center">
-        <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-          <div class="text-xs text-gray-500 font-medium">雅思等级分 (Band Score)</div>
-          <div class="text-3xl font-extrabold text-red-600 mt-1" id="report-band-score">7.5</div>
-          <div class="text-[10px] text-gray-400 mt-0.5">官方 9 分制换算</div>
-        </div>
-        <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-          <div class="text-xs text-gray-500 font-medium">原始正确题数 (Raw Score)</div>
-          <div class="text-3xl font-extrabold text-blue-600 mt-1" id="report-raw-score">32 / 40</div>
-          <div class="text-[10px] text-gray-400 mt-0.5" id="report-accuracy">正确率: 80%</div>
-        </div>
-        <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-          <div class="text-xs text-gray-500 font-medium">错误与未答</div>
-          <div class="text-3xl font-extrabold text-amber-600 mt-1" id="report-error-count">8</div>
-          <div class="text-[10px] text-gray-400 mt-0.5">需重点复盘</div>
-        </div>
-        <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-          <div class="text-xs text-gray-500 font-medium">用时情况</div>
-          <div class="text-2xl font-bold text-gray-800 mt-1" id="report-time-spent">28分45秒</div>
-          <div class="text-[10px] text-gray-400 mt-0.5">考试限时内交卷</div>
-        </div>
-      </div>
-
-      <!-- 错题明细表与解析 -->
-      <div class="flex-1 overflow-y-auto p-6 space-y-4">
-        <div class="flex items-center justify-between">
-          <h3 class="font-bold text-sm text-gray-800">40 题逐题答题明细与官方标准答案核对:</h3>
-          <div class="flex items-center space-x-2 text-xs">
-            <button onclick="filterReport('all')" class="px-2.5 py-1 rounded bg-gray-200 text-gray-800 font-medium" id="btn-filter-all">全部 (40)</button>
-            <button onclick="filterReport('wrong')" class="px-2.5 py-1 rounded bg-red-100 text-red-700 font-medium" id="btn-filter-wrong">仅看错题</button>
-          </div>
-        </div>
-
-        <div id="report-details-list" class="space-y-2.5 text-xs">
-          <!-- 动态渲染题目答案对比与解析 -->
-        </div>
-      </div>
-
-      <!-- 底部操作按钮 -->
-      <div class="px-6 py-3 bg-gray-100 border-t border-gray-200 flex items-center justify-between shrink-0">
-        <span class="text-xs text-gray-500">点击错题可跳转至题目快速复习。</span>
-        <div class="flex items-center space-x-3">
-          <button onclick="switchToStudyFromReport()" class="px-4 py-1.5 rounded-md bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold">
-            切换到精听精读模式深入复盘
-          </button>
-          <button onclick="closeScoreModal()" class="px-4 py-1.5 rounded-md bg-gray-800 hover:bg-gray-900 text-white text-xs font-semibold">
-            关闭报告
-          </button>
-        </div>
-      </div>
+  <div class="modal" id="modal-report" hidden>
+    <div class="modal-card wide">
+      <div class="modal-head"><h2>成绩报告</h2><button class="btn ghost" data-close>×</button></div>
+      <div class="modal-body" id="report-body"></div>
     </div>
   </div>
 
-  <!-- 原生音频播放标签 (隐藏) -->
-  <audio id="global-audio" preload="auto"></audio>
+  <div class="modal" id="modal-history" hidden>
+    <div class="modal-card wide">
+      <div class="modal-head"><h2>历史成绩</h2><button class="btn ghost" data-close>×</button></div>
+      <div class="modal-body" id="history-body"></div>
+    </div>
+  </div>
 
-  <!-- 前端核心应用逻辑 -->
+  <div class="hl-toolbar" id="hl-toolbar" hidden>
+    <button data-hl="add">高亮</button><button data-hl="clear">清除本页高亮</button>
+  </div>
+  <div class="toast" id="toast" hidden></div>
+  <audio id="audio" preload="auto"></audio>
+
+  <script src="js/scoring.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/store.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

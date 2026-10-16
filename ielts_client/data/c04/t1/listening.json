@@ -1,0 +1,593 @@
+{
+  "schema_version": 2,
+  "book": 4,
+  "test": 1,
+  "module": "listening",
+  "title": "Cambridge IELTS 4 · Test 1 · Listening",
+  "verified": true,
+  "source": {
+    "pdf": "题目/Cambridge-IELTS-04.pdf",
+    "pages": [
+      1,
+      8
+    ],
+    "note": "题目与原文按《剑桥雅思 4》原书 Test 1 录入；答案按官方答案页（公开答案与原文逐题核对）。"
+  },
+  "parts": [
+    {
+      "number": 1,
+      "title": "Section 1",
+      "audio": "c04/t1/s1.mp3",
+      "transcript": "transcript_s1.json",
+      "questions_range": [
+        1,
+        10
+      ],
+      "groups": [
+        {
+          "range": [
+            1,
+            4
+          ],
+          "type": "completion",
+          "category": "note_completion",
+          "instruction": "Complete the notes below.\nWrite **NO MORE THAN THREE WORDS AND/OR A NUMBER** for each answer.",
+          "limit": {
+            "words": 3,
+            "number": true
+          },
+          "template": "# NOTES ON SOCIAL PROGRAMME\n\n> **Example** — Number of trips per month: **5**\n\nVisit places which have:\n- historical interest\n- good {{1}}\n- {{2}}\n\n| Cost: | between £5.00 and £15.00 per person |\n| Note: | special trips organised for groups of {{3}} people |\n| Time: | departure – 8.30 a.m.<br>return – 6.00 p.m. |\n| To reserve a seat: | sign name on the {{4}} 3 days in advance |",
+          "questions": [
+            {
+              "id": 1,
+              "answer": [
+                "shopping",
+                "variety of shopping"
+              ],
+              "t": 157.02
+            },
+            {
+              "id": 2,
+              "answer": [
+                "guided tours"
+              ],
+              "t": 166.44
+            },
+            {
+              "id": 3,
+              "answer": [
+                "more than 12",
+                "over 12",
+                "more than twelve",
+                "over twelve"
+              ],
+              "t": 190.28
+            },
+            {
+              "id": 4,
+              "answer": [
+                "notice board",
+                "noticeboard"
+              ],
+              "t": 214.5
+            }
+          ]
+        },
+        {
+          "range": [
+            5,
+            10
+          ],
+          "type": "completion",
+          "category": "table_completion",
+          "instruction": "Complete the table below.\nWrite **NO MORE THAN THREE WORDS AND/OR A NUMBER** for each answer.",
+          "limit": {
+            "words": 3,
+            "number": true
+          },
+          "template": "# WEEKEND TRIPS\n\n| Place | Date | Number of seats | Optional extra |\n|---|---|---|---|\n| St Ives | {{5}} | 16 | Hepworth Museum |\n| London | 16th February | 45 | {{6}} |\n| {{7}} | 3rd March | 18 | S.S. Great Britain |\n| Salisbury | 18th March | 50 | Stonehenge |\n| Bath | 23rd March | 16 | {{8}} |\n\nFor further information:\nRead the {{9}} or see Social Assistant: Jane {{10}}",
+          "questions": [
+            {
+              "id": 5,
+              "answer": [
+                "13th February"
+              ],
+              "t": 293.06
+            },
+            {
+              "id": 6,
+              "answer": [
+                "Tower of London"
+              ],
+              "t": 323.86
+            },
+            {
+              "id": 7,
+              "answer": [
+                "Bristol"
+              ],
+              "t": 327.98
+            },
+            {
+              "id": 8,
+              "answer": [
+                "(the) American Museum"
+              ],
+              "t": 376.14
+            },
+            {
+              "id": 9,
+              "answer": [
+                "(the) student newspaper"
+              ],
+              "t": 385.1
+            },
+            {
+              "id": 10,
+              "answer": [
+                "Yentob"
+              ],
+              "t": 391.86
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Section 2",
+      "audio": "c04/t1/s2.mp3",
+      "transcript": "transcript_s2.json",
+      "questions_range": [
+        11,
+        20
+      ],
+      "groups": [
+        {
+          "range": [
+            11,
+            13
+          ],
+          "type": "completion",
+          "category": "sentence_completion",
+          "instruction": "Complete the sentences below.\nWrite **NO MORE THAN THREE WORDS AND/OR A NUMBER** for each answer.",
+          "limit": {
+            "words": 3,
+            "number": true
+          },
+          "title": "RIVERSIDE INDUSTRIAL VILLAGE",
+          "questions": [
+            {
+              "id": 11,
+              "prompt": "Riverside Village was a good place to start an industry because it had water, raw materials and fuels such as {{11.1}} and {{11.2}}.",
+              "answer": [
+                [
+                  "coal"
+                ],
+                [
+                  "firewood"
+                ]
+              ],
+              "blanks": 2,
+              "any_order": true,
+              "t": 76.9
+            },
+            {
+              "id": 12,
+              "prompt": "The metal industry was established at Riverside Village by {{12}} who lived in the area.",
+              "answer": [
+                "local craftsmen"
+              ],
+              "t": 89.26
+            },
+            {
+              "id": 13,
+              "prompt": "There were over {{13}} water-powered mills in the area in the eighteenth century.",
+              "answer": [
+                "160"
+              ],
+              "t": 101.74
+            }
+          ]
+        },
+        {
+          "range": [
+            14,
+            20
+          ],
+          "type": "completion",
+          "category": "plan_labelling",
+          "instruction": "Label the plan below.\nWrite **NO MORE THAN TWO WORDS** for each answer.",
+          "limit": {
+            "words": 2,
+            "number": false
+          },
+          "image": "img/l_s2_plan.png",
+          "questions": [
+            {
+              "id": 14,
+              "prompt": "{{14}} Road",
+              "answer": [
+                "Woodside"
+              ],
+              "t": 188.92
+            },
+            {
+              "id": 15,
+              "prompt": "The {{15}}",
+              "answer": [
+                "Ticket Office"
+              ],
+              "t": 196.96
+            },
+            {
+              "id": 16,
+              "prompt": "The {{16}}",
+              "answer": [
+                "Gift Shop"
+              ],
+              "t": 216.0
+            },
+            {
+              "id": 17,
+              "prompt": "The {{17}}",
+              "answer": [
+                "(main) Workshop"
+              ],
+              "t": 234.24
+            },
+            {
+              "id": 18,
+              "prompt": "The {{18}}",
+              "answer": [
+                "Showroom"
+              ],
+              "t": 245.68
+            },
+            {
+              "id": 19,
+              "prompt": "The {{19}}",
+              "answer": [
+                "Cafe",
+                "Café"
+              ],
+              "t": 264.56
+            },
+            {
+              "id": 20,
+              "prompt": "The {{20}} for the workers",
+              "answer": [
+                "cottages"
+              ],
+              "t": 275.96
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Section 3",
+      "audio": "c04/t1/s3.mp3",
+      "transcript": "transcript_s3.json",
+      "questions_range": [
+        21,
+        30
+      ],
+      "groups": [
+        {
+          "range": [
+            21,
+            22
+          ],
+          "type": "single_choice",
+          "category": "multiple_choice",
+          "instruction": "Choose the correct letter, **A**, **B** or **C**.",
+          "example": "Melanie could not borrow any books from the library because\nA the librarian was out.\nB she didn’t have time to look.\n**C the books had already been borrowed.**",
+          "questions": [
+            {
+              "id": 21,
+              "prompt": "Melanie says she has not started the assignment because",
+              "answer": [
+                "A"
+              ],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "she was doing work for another course."
+                },
+                {
+                  "key": "B",
+                  "text": "it was a really big assignment."
+                },
+                {
+                  "key": "C",
+                  "text": "she hasn’t spent time in the library."
+                }
+              ],
+              "t": 79.89
+            },
+            {
+              "id": 22,
+              "prompt": "The lecturer says that reasonable excuses for extensions are",
+              "answer": [
+                "C"
+              ],
+              "options": [
+                {
+                  "key": "A",
+                  "text": "planning problems."
+                },
+                {
+                  "key": "B",
+                  "text": "problems with assignment deadlines."
+                },
+                {
+                  "key": "C",
+                  "text": "personal illness or accident."
+                }
+              ],
+              "t": 96.89
+            }
+          ]
+        },
+        {
+          "range": [
+            23,
+            27
+          ],
+          "type": "matching",
+          "category": "matching",
+          "instruction": "What recommendations does Dr Johnson make about the journal articles?\nChoose your answers from the box and write the letters **A–G** next to questions 23–27.",
+          "options": [
+            {
+              "key": "A",
+              "text": "must read"
+            },
+            {
+              "key": "B",
+              "text": "useful"
+            },
+            {
+              "key": "C",
+              "text": "limited value"
+            },
+            {
+              "key": "D",
+              "text": "read first section"
+            },
+            {
+              "key": "E",
+              "text": "read research methods"
+            },
+            {
+              "key": "F",
+              "text": "read conclusion"
+            },
+            {
+              "key": "G",
+              "text": "don’t read"
+            }
+          ],
+          "example": "Anderson and Hawker: **A**",
+          "questions": [
+            {
+              "id": 23,
+              "prompt": "Jackson",
+              "answer": [
+                "E"
+              ],
+              "t": 177.89
+            },
+            {
+              "id": 24,
+              "prompt": "Roberts",
+              "answer": [
+                "B"
+              ],
+              "t": 188.89
+            },
+            {
+              "id": 25,
+              "prompt": "Morris",
+              "answer": [
+                "G"
+              ],
+              "t": 199.89
+            },
+            {
+              "id": 26,
+              "prompt": "Cooper",
+              "answer": [
+                "F"
+              ],
+              "t": 208.89
+            },
+            {
+              "id": 27,
+              "prompt": "Forster",
+              "answer": [
+                "C"
+              ],
+              "t": 219.89
+            }
+          ]
+        },
+        {
+          "range": [
+            28,
+            30
+          ],
+          "type": "matching",
+          "category": "chart_labelling",
+          "instruction": "Label the chart below.\nChoose your answers from the box below and write the letters **A–H** next to questions 28–30.",
+          "image": "img/l_s3_chart.png",
+          "options": [
+            {
+              "key": "A",
+              "text": "uncooperative landlord"
+            },
+            {
+              "key": "B",
+              "text": "environment"
+            },
+            {
+              "key": "C",
+              "text": "space"
+            },
+            {
+              "key": "D",
+              "text": "noisy neighbours"
+            },
+            {
+              "key": "E",
+              "text": "near city"
+            },
+            {
+              "key": "F",
+              "text": "work location"
+            },
+            {
+              "key": "G",
+              "text": "transport"
+            },
+            {
+              "key": "H",
+              "text": "rent"
+            }
+          ],
+          "options_title": "Possible reasons",
+          "questions": [
+            {
+              "id": 28,
+              "prompt": "Bar 2",
+              "answer": [
+                "D"
+              ],
+              "t": 300.36
+            },
+            {
+              "id": 29,
+              "prompt": "Bar 4",
+              "answer": [
+                "A"
+              ],
+              "t": 321.36
+            },
+            {
+              "id": 30,
+              "prompt": "Bar 6",
+              "answer": [
+                "B"
+              ],
+              "t": 347.36
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Section 4",
+      "audio": "c04/t1/s4.mp3",
+      "transcript": "transcript_s4.json",
+      "questions_range": [
+        31,
+        40
+      ],
+      "groups": [
+        {
+          "range": [
+            31,
+            40
+          ],
+          "type": "completion",
+          "category": "note_completion",
+          "instruction": "Complete the notes below.\nWrite **NO MORE THAN TWO WORDS** for each answer.",
+          "limit": {
+            "words": 2,
+            "number": false
+          },
+          "template": "# THE URBAN LANDSCAPE\n\n**Two areas of focus:**\n- the effect of vegetation on the urban climate\n- ways of planning our {{31}} better\n\n**Large-scale impact of trees:**\n- they can make cities more or less {{32}}\n- in summer they can make cities cooler\n- they can make inland cities more {{33}}\n\n**Local impact of trees:**\n- they can make local areas\n  - more {{34}}\n  - cooler\n  - more humid\n  - less windy\n  - less {{35}}\n\n## Comparing trees and buildings\n\n**Temperature regulation:**\n- trees evaporate water through their {{36}}\n- building surfaces may reach high temperatures\n\n**Wind force:**\n- tall buildings cause more wind at {{37}} level\n- trees {{38}} the wind force\n\n**Noise:**\n- trees have a small effect on traffic noise\n- {{39}} frequency noise passes through trees\n\n**Important points to consider:**\n- trees require a lot of sunlight, water and {{40}} to grow",
+          "questions": [
+            {
+              "id": 31,
+              "answer": [
+                "cities",
+                "environment"
+              ],
+              "t": 69.21
+            },
+            {
+              "id": 32,
+              "answer": [
+                "windy"
+              ],
+              "t": 81.95
+            },
+            {
+              "id": 33,
+              "answer": [
+                "humid"
+              ],
+              "t": 94.59
+            },
+            {
+              "id": 34,
+              "answer": [
+                "shady",
+                "shaded"
+              ],
+              "t": 102.11
+            },
+            {
+              "id": 35,
+              "answer": [
+                "dangerous"
+              ],
+              "t": 118.59
+            },
+            {
+              "id": 36,
+              "answer": [
+                "leaves"
+              ],
+              "t": 134.15
+            },
+            {
+              "id": 37,
+              "answer": [
+                "ground"
+              ],
+              "t": 179.44
+            },
+            {
+              "id": 38,
+              "answer": [
+                "considerably reduce",
+                "decrease",
+                "filter"
+              ],
+              "t": 205.08
+            },
+            {
+              "id": 39,
+              "answer": [
+                "low"
+              ],
+              "t": 245.36
+            },
+            {
+              "id": 40,
+              "answer": [
+                "space",
+                "room"
+              ],
+              "t": 277.2
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

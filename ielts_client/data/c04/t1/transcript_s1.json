@@ -1,0 +1,347 @@
+{
+ "source": "asr",
+ "model": "faster-whisper small.en",
+ "note": "自动语音识别结果，未人工校对；以官方 Tapescript 为准。",
+ "segments": [
+  {
+   "start": 0.78,
+   "end": 31.49,
+   "text": "There will be time for you to read the instructions and questions, and you'll have a chance to"
+  },
+  {
+   "start": 31.49,
+   "end": 37.73,
+   "text": "check your work. All the recordings will be played once only."
+  },
+  {
+   "start": 37.73,
+   "end": 44.81,
+   "text": "The test is in four sections. At the end of the test, you'll be given ten minutes to transfer"
+  },
+  {
+   "start": 44.81,
+   "end": 54.48,
+   "text": "your answers to an answer sheet. Now turn to section one. Section one. You'll"
+  },
+  {
+   "start": 54.48,
+   "end": 60.32,
+   "text": "hear a young student asking the social organiser of his school for information about organised"
+  },
+  {
+   "start": 60.32,
+   "end": 64.6,
+   "text": "trips. First, you have some time to look at questions"
+  },
+  {
+   "start": 64.6,
+   "end": 90.85,
+   "text": "one to four. You'll see that there is an example which has been done for you. On this occasion"
+  },
+  {
+   "start": 90.85,
+   "end": 98.42,
+   "text": "only, the conversation relating to this will be played first."
+  },
+  {
+   "start": 98.42,
+   "end": 101.54,
+   "text": "Good morning. Good morning. How can I help you?"
+  },
+  {
+   "start": 101.54,
+   "end": 106.46,
+   "text": "I understand that the school organises trips to different..."
+  },
+  {
+   "start": 106.46,
+   "end": 115.88,
+   "text": "Yes, we run five every month, three during weekends and two Wednesday afternoon trips."
+  },
+  {
+   "start": 115.88,
+   "end": 123.04,
+   "text": "There are five trips every month, so five has been written in the notes."
+  },
+  {
+   "start": 123.04,
+   "end": 127.88,
+   "text": "Now we shall begin. You should answer the questions as you listen because you will"
+  },
+  {
+   "start": 127.88,
+   "end": 137.96,
+   "text": "not hear the recording a second time. Listen carefully and answer questions one to four."
+  },
+  {
+   "start": 137.96,
+   "end": 141.12,
+   "text": "Good morning. Good morning. How can I help you?"
+  },
+  {
+   "start": 141.12,
+   "end": 146.04,
+   "text": "I understand that the school organises trips to different..."
+  },
+  {
+   "start": 146.04,
+   "end": 152.44,
+   "text": "Yes, we run five every month, three during weekends and two Wednesday afternoon trips."
+  },
+  {
+   "start": 152.44,
+   "end": 157.02,
+   "text": "What sort of places? Well, obviously it varies, but always places"
+  },
+  {
+   "start": 157.02,
+   "end": 162.52,
+   "text": "of historical interest, and also which offer a variety of shopping because our students"
+  },
+  {
+   "start": 162.52,
+   "end": 166.44,
+   "text": "always ask about that. And then we go for ones where we know there"
+  },
+  {
+   "start": 166.44,
+   "end": 170.76,
+   "text": "are guided tours, because this gives a good focus for the visit."
+  },
+  {
+   "start": 170.76,
+   "end": 175.04,
+   "text": "Do travel far? Well, we're lucky here, obviously, because"
+  },
+  {
+   "start": 175.04,
+   "end": 179.4,
+   "text": "we're able to say that all our visits are less than three hours' drive."
+  },
+  {
+   "start": 179.4,
+   "end": 184.4,
+   "text": "How much do they cost? Again, it varies, between five and fifteen"
+  },
+  {
+   "start": 184.4,
+   "end": 190.28,
+   "text": "pounds ahead, depending on distance. Oh, and we do offer to arrange special"
+  },
+  {
+   "start": 190.28,
+   "end": 193.32,
+   "text": "trips if, you know, there are more than twelve people."
+  },
+  {
+   "start": 193.32,
+   "end": 198.2,
+   "text": "Oh, right. I'll keep that in mind. And what are the times, normally?"
+  },
+  {
+   "start": 198.2,
+   "end": 203.74,
+   "text": "We try to keep it pretty fixed, so that students get to know the pattern."
+  },
+  {
+   "start": 203.74,
+   "end": 209.92,
+   "text": "We leave at 8.30am and return at 6pm. We figure it's best to keep the day fairly"
+  },
+  {
+   "start": 209.92,
+   "end": 214.5,
+   "text": "short. Oh, yes. And how do we reserve a place?"
+  },
+  {
+   "start": 214.5,
+   "end": 217.56,
+   "text": "You sign your name on the notice board. Do you know where it is?"
+  },
+  {
+   "start": 217.56,
+   "end": 222.28,
+   "text": "Aha, I saw it this morning. And we do ask that you sign up three days"
+  },
+  {
+   "start": 222.28,
+   "end": 226.56,
+   "text": "in advance, so we know we've got enough people interested to run it."
+  },
+  {
+   "start": 226.56,
+   "end": 230.28,
+   "text": "And we can cancel, if necessary, with full refund, of course."
+  },
+  {
+   "start": 230.28,
+   "end": 236.85,
+   "text": "That's fine. Thanks. Before you hear the rest of the conversation,"
+  },
+  {
+   "start": 236.85,
+   "end": 260.33,
+   "text": "you have some time to look at questions five to ten."
+  },
+  {
+   "start": 260.33,
+   "end": 269.82,
+   "text": "Now listen, and answer questions five to ten. And what visits are planned for this term?"
+  },
+  {
+   "start": 269.82,
+   "end": 275.22,
+   "text": "Right. Well, I'm afraid the schedule hasn't been printed out yet."
+  },
+  {
+   "start": 275.22,
+   "end": 280.68,
+   "text": "But we have confirmed the dates and planned the optional extra visits, which you can also"
+  },
+  {
+   "start": 280.68,
+   "end": 284.78,
+   "text": "book in advance if you want to. Oh, that's all right."
+  },
+  {
+   "start": 284.78,
+   "end": 290.06,
+   "text": "If you can just give some idea of the weekend ones, so I can, you know, work out when"
+  },
+  {
+   "start": 290.06,
+   "end": 293.06,
+   "text": "to see friends, etc. Oh, sure."
+  },
+  {
+   "start": 293.06,
+   "end": 301.1,
+   "text": "Well, the first one is St Ives. That's on the 13th of February, and we'll have only"
+  },
+  {
+   "start": 301.1,
+   "end": 305.3,
+   "text": "sixteen places available, because we're going by minibus."
+  },
+  {
+   "start": 305.3,
+   "end": 310.42,
+   "text": "And that's a day in town, with the optional extra of visiting the Hepworth Museum."
+  },
+  {
+   "start": 310.42,
+   "end": 316.62,
+   "text": "All right. Yeah, that sounds good. Then there's a London trip on the 16th of"
+  },
+  {
+   "start": 316.62,
+   "end": 323.86,
+   "text": "February, and we'll be taking a medium-sized coach, so there'll be 45 places on that."
+  },
+  {
+   "start": 323.86,
+   "end": 327.98,
+   "text": "And let's see, the optional extra is the Tower of London."
+  },
+  {
+   "start": 327.98,
+   "end": 333.58,
+   "text": "Oh, I've already been there. After that, there's Bristol on the 3rd of"
+  },
+  {
+   "start": 333.58,
+   "end": 338.14,
+   "text": "March. Where? Bristol. B-R-I-S-T-O-L."
+  },
+  {
+   "start": 338.14,
+   "end": 344.82,
+   "text": "OK. That's in a different minibus, with 18 places"
+  },
+  {
+   "start": 344.82,
+   "end": 348.58,
+   "text": "available. Oh, and the optional extra is a visit to the"
+  },
+  {
+   "start": 348.58,
+   "end": 351.86,
+   "text": "SS Great Britain. OK."
+  },
+  {
+   "start": 351.86,
+   "end": 357.9,
+   "text": "We're going to Salisbury on the 18th of March, and that's always a popular one, because"
+  },
+  {
+   "start": 357.9,
+   "end": 363.46,
+   "text": "the optional extra is Stonehenge, so we're taking the large coach with 50 seats."
+  },
+  {
+   "start": 363.46,
+   "end": 368.26,
+   "text": "Oh, good. And then the last one is to Bath on the 23rd"
+  },
+  {
+   "start": 368.26,
+   "end": 372.02,
+   "text": "of March. Oh, yes. Is Bath the Roman City?"
+  },
+  {
+   "start": 372.02,
+   "end": 376.14,
+   "text": "Yes, that's right. And that's in the 16-seater minibus."
+  },
+  {
+   "start": 376.14,
+   "end": 380.9,
+   "text": "And where's the optional visit? It's to the American Museum. Well worth a"
+  },
+  {
+   "start": 380.9,
+   "end": 385.1,
+   "text": "visit. OK. Well, that's great. Thanks for all that."
+  },
+  {
+   "start": 385.1,
+   "end": 388.46,
+   "text": "My pleasure. Oh, by the way, if you want more information"
+  },
+  {
+   "start": 388.46,
+   "end": 391.86,
+   "text": "about any of the trips, have a look in the student newspaper."
+  },
+  {
+   "start": 391.86,
+   "end": 397.74,
+   "text": "OK. Or have a word with my assistant. Her name is Jane Yentob."
+  },
+  {
+   "start": 397.74,
+   "end": 402.82,
+   "text": "That's Y-E-N-T-O-B. Right. I've got that."
+  },
+  {
+   "start": 402.82,
+   "end": 405.58,
+   "text": "Thank you very much for all your help. You're very welcome."
+  },
+  {
+   "start": 405.58,
+   "end": 412.85,
+   "text": "I hope you enjoy the trips. That is the end of section one."
+  },
+  {
+   "start": 412.85,
+   "end": 415.93,
+   "text": "You now have half a minute to check your answers."
+  },
+  {
+   "start": 415.93,
+   "end": 447.37,
+   "text": "Now turn to section two."
+  }
+ ]
+}

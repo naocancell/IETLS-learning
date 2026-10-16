@@ -1,0 +1,4 @@
+# 只在录入新题库时需要（PDF 提取、听力语音识别），日常使用不用装
+pymupdf>=1.23
+faster-whisper>=1.0
+numpy

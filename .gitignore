@@ -22,3 +22,11 @@ venv/
 .idea/
 .DS_Store
 Thumbs.db
+
+# 运行时生成：音频缓存、学习记录、导出的成绩单、本地配置
+ielts_client/media/
+userdata/
+exports/
+config.json
+work/
+.venv/

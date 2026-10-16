@@ -1,0 +1,6 @@
+{
+  "port": 18920,
+  "audio_dirs": ["听力"],
+  "media_dir": "ielts_client/media",
+  "window": { "width": 1440, "height": 920 }
+}
