@@ -1,0 +1,396 @@
+/* IELTS Master 核心现代化样式表 - 离线独立可用 */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: #f3f4f6;
+  color: #1f2937;
+  user-select: auto;
+}
+
+/* 基础尺寸与布局 */
+.h-screen { height: 100vh; }
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.flex-1 { flex: 1 1 0%; }
+.shrink-0 { flex-shrink: 0; }
+.overflow-hidden { overflow: hidden; }
+.overflow-y-auto { overflow-y: auto; }
+.overflow-x-auto { overflow-x: auto; }
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed { position: fixed; }
+.inset-0 { inset: 0px; }
+.inset-y-0 { top: 0px; bottom: 0px; }
+.right-0 { right: 0px; }
+.z-10 { z-index: 10; }
+.z-40 { z-index: 40; }
+.z-50 { z-index: 50; }
+.hidden { display: none !important; }
+.w-full { width: 100%; }
+.w-1\/2 { width: 50%; }
+.w-2\/5 { width: 40%; }
+.w-1\.5 { width: 0.375rem; }
+.w-0\.5 { width: 0.125rem; }
+.w-2\.5 { width: 0.625rem; }
+.w-3 { width: 0.75rem; }
+.w-3\.5 { width: 0.875rem; }
+.w-4 { width: 1rem; }
+.w-6 { width: 1.5rem; }
+.w-8 { width: 2rem; }
+.w-16 { width: 4rem; }
+.w-48 { width: 12rem; }
+.h-2\.5 { height: 0.625rem; }
+.h-3 { height: 0.75rem; }
+.h-3\.5 { height: 0.875rem; }
+.h-4 { height: 1rem; }
+.h-6 { height: 1.5rem; }
+.h-8 { height: 2rem; }
+.max-w-3xl { max-width: 48rem; }
+.max-h-\[90vh\] { max-height: 90vh; }
+
+/* 间距 */
+.p-1 { padding: 0.25rem; }
+.p-2 { padding: 0.5rem; }
+.p-4 { padding: 1rem; }
+.p-5 { padding: 1.25rem; }
+.p-6 { padding: 1.5rem; }
+.px-2 { padding-left: 0.5rem; padding-right: 0.5rem; }
+.px-2\.5 { padding-left: 0.625rem; padding-right: 0.625rem; }
+.px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+.px-4 { padding-left: 1rem; padding-right: 1rem; }
+.px-5 { padding-left: 1.25rem; padding-right: 1.25rem; }
+.px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+.py-0\.5 { padding-top: 0.125rem; padding-bottom: 0.125rem; }
+.py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+.py-1\.5 { padding-top: 0.375rem; padding-bottom: 0.375rem; }
+.py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+.py-2\.5 { padding-top: 0.625rem; padding-bottom: 0.625rem; }
+.py-3\.5 { padding-top: 0.875rem; padding-bottom: 0.875rem; }
+.py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+.pl-2 { padding-left: 0.5rem; }
+.pl-4 { padding-left: 1rem; }
+.mt-0\.5 { margin-top: 0.125rem; }
+.mt-1 { margin-top: 0.25rem; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-4 { margin-top: 1rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.ml-1 { margin-left: 0.25rem; }
+.space-x-1 > :not([hidden]) ~ :not([hidden]) { margin-left: 0.25rem; }
+.space-x-1\.5 > :not([hidden]) ~ :not([hidden]) { margin-left: 0.375rem; }
+.space-x-2 > :not([hidden]) ~ :not([hidden]) { margin-left: 0.5rem; }
+.space-x-3 > :not([hidden]) ~ :not([hidden]) { margin-left: 0.75rem; }
+.space-x-4 > :not([hidden]) ~ :not([hidden]) { margin-left: 1rem; }
+.space-x-6 > :not([hidden]) ~ :not([hidden]) { margin-left: 1.5rem; }
+.space-y-1 > :not([hidden]) ~ :not([hidden]) { margin-top: 0.25rem; }
+.space-y-2\.5 > :not([hidden]) ~ :not([hidden]) { margin-top: 0.625rem; }
+.space-y-4 > :not([hidden]) ~ :not([hidden]) { margin-top: 1rem; }
+.space-y-6 > :not([hidden]) ~ :not([hidden]) { margin-top: 1.5rem; }
+
+/* Grid */
+.grid { display: grid; }
+.grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.gap-4 { gap: 1rem; }
+
+/* 边框与圆角 */
+.rounded { border-radius: 0.25rem; }
+.rounded-md { border-radius: 0.375rem; }
+.rounded-lg { border-radius: 0.5rem; }
+.rounded-xl { border-radius: 0.75rem; }
+.rounded-full { border-radius: 9999px; }
+.border { border-width: 1px; }
+.border-b { border-bottom-width: 1px; }
+.border-t { border-top-width: 1px; }
+.border-r { border-right-width: 1px; }
+.border-l { border-left-width: 1px; }
+.border-slate-700 { border-color: #334155; }
+.border-slate-800 { border-color: #1e293b; }
+.border-indigo-700 { border-color: #4338ca; }
+.border-indigo-900 { border-color: #312e81; }
+.border-gray-200 { border-color: #e5e7eb; }
+.border-gray-300 { border-color: #d1d5db; }
+.border-gray-400 { border-color: #9ca3af; }
+.border-yellow-500 { border-color: #eab308; }
+
+/* 颜色系统 */
+.bg-white { background-color: #ffffff; }
+.bg-gray-50 { background-color: #f9fafb; }
+.bg-gray-100 { background-color: #f3f4f6; }
+.bg-gray-200 { background-color: #e5e7eb; }
+.bg-gray-800 { background-color: #1f2937; }
+.bg-gray-900 { background-color: #111827; }
+.bg-slate-800 { background-color: #1e293b; }
+.bg-slate-900 { background-color: #0f172a; }
+.bg-slate-950 { background-color: #020617; }
+.bg-indigo-600 { background-color: #4f46e5; }
+.bg-indigo-800 { background-color: #3730a3; }
+.bg-indigo-900 { background-color: #312e81; }
+.bg-indigo-950 { background-color: #1e1b4b; }
+.bg-red-100 { background-color: #fee2e2; }
+.bg-red-600 { background-color: #dc2626; }
+.bg-blue-600 { background-color: #2563eb; }
+.bg-amber-400 { background-color: #fbbf24; }
+.bg-amber-500 { background-color: #f59e0b; }
+.bg-yellow-300 { background-color: #fde047; }
+.bg-yellow-400 { background-color: #facc15; }
+.bg-green-100 { background-color: #dcfce7; }
+.bg-green-600 { background-color: #16a34a; }
+
+.hover\:bg-gray-100:hover { background-color: #f3f4f6; }
+.hover\:bg-gray-700:hover { background-color: #374151; }
+.hover\:bg-gray-900:hover { background-color: #111827; }
+.hover\:bg-slate-700:hover { background-color: #334155; }
+.hover\:bg-red-700:hover { background-color: #b91c1c; }
+.hover\:bg-indigo-500:hover { background-color: #6366f1; }
+.hover\:bg-indigo-700:hover { background-color: #4338ca; }
+.hover\:bg-indigo-800:hover { background-color: #3730a3; }
+
+/* 文本样式 */
+.text-white { color: #ffffff; }
+.text-slate-100 { color: #f1f5f9; }
+.text-slate-300 { color: #cbd5e1; }
+.text-slate-400 { color: #94a3b8; }
+.text-slate-950 { color: #020617; }
+.text-gray-400 { color: #9ca3af; }
+.text-gray-500 { color: #6b7280; }
+.text-gray-700 { color: #374151; }
+.text-gray-800 { color: #1f2937; }
+.text-gray-900 { color: #111827; }
+.text-indigo-100 { color: #e0e7ff; }
+.text-indigo-300 { color: #a5b4fc; }
+.text-indigo-400 { color: #818cf8; }
+.text-red-400 { color: #f87171; }
+.text-red-600 { color: #dc2626; }
+.text-red-700 { color: #b91c1c; }
+.text-blue-600 { color: #2563eb; }
+.text-green-600 { color: #16a34a; }
+.text-green-700 { color: #15803d; }
+.text-amber-400 { color: #fbbf24; }
+.text-amber-600 { color: #d97706; }
+
+.text-\[10px\] { font-size: 10px; }
+.text-\[11px\] { font-size: 11px; }
+.text-xs { font-size: 0.75rem; line-height: 1rem; }
+.text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+.text-base { font-size: 1rem; line-height: 1.5rem; }
+.text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+.text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+.text-2xl { font-size: 1.5rem; line-height: 2rem; }
+.text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+.font-bold { font-weight: 700; }
+.font-extrabold { font-weight: 800; }
+.font-black { font-weight: 900; }
+.font-mono { font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+.tracking-wide { letter-spacing: 0.025em; }
+.tracking-wider { letter-spacing: 0.05em; }
+.text-center { text-align: center; }
+.leading-relaxed { line-height: 1.625; }
+
+/* 交互状态 */
+.cursor-pointer { cursor: pointer; }
+.cursor-col-resize { cursor: col-resize; }
+.shadow { box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); }
+.shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+.shadow-md { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
+.shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+.shadow-2xl { box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); }
+.shadow-inner { box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06); }
+.transition { transition-property: all; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+.transition-all { transition-property: all; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+.transition-colors { transition-property: color, background-color, border-color; transition-duration: 150ms; }
+
+/* 雅思文章排版与高亮样式 */
+.passage-paragraph {
+  margin-bottom: 1rem;
+  text-indent: 1.5em;
+  line-height: 1.8;
+  font-size: 14.5px;
+}
+.passage-heading {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: #111827;
+}
+
+mark.ielts-highlight {
+  background-color: #fef08a !important;
+  color: #713f12 !important;
+  padding: 1px 3px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+mark.ielts-highlight:hover {
+  background-color: #fde047 !important;
+}
+
+/* 听力出题点高亮动画 */
+.target-highlight-pulse {
+  animation: pulse-yellow 2s ease-in-out infinite;
+}
+@keyframes pulse-yellow {
+  0%, 100% { background-color: rgba(250, 204, 21, 0.2); }
+  50% { background-color: rgba(250, 204, 21, 0.6); }
+}
+
+/* 题目卡片样式 */
+.question-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.question-card:hover {
+  border-color: #93c5fd;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+}
+.question-card.active-target {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+/* 题号小徽章 */
+.q-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 0.25rem;
+  font-weight: 700;
+  font-size: 0.75rem;
+  background-color: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+/* 底部 40 题导航按钮状态 */
+.nav-q-btn {
+  width: 2.25rem;
+  height: 1.85rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #475569;
+  transition: all 0.1s ease;
+  flex-shrink: 0;
+}
+.nav-q-btn:hover {
+  border-color: #2563eb;
+  color: #2563eb;
+}
+.nav-q-btn.answered {
+  background-color: #2563eb;
+  color: #ffffff;
+  border-color: #1d4ed8;
+}
+.nav-q-btn.current {
+  box-shadow: 0 0 0 2px #f59e0b;
+}
+.nav-q-btn.reviewed::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 6px;
+  height: 6px;
+  background-color: #facc15;
+  border-radius: 50%;
+  border: 1px solid #854d0e;
+}
+
+/* 填空输入框 */
+.ielts-input {
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  padding: 0.375rem 0.625rem;
+  font-size: 0.875rem;
+  width: 100%;
+  max-width: 20rem;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  background-color: #ffffff;
+}
+.ielts-input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* 单选题选项按钮 */
+.option-btn {
+  display: flex;
+  align-items: flex-start;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.375rem;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: all 0.12s ease;
+  text-align: left;
+  font-size: 0.825rem;
+  line-height: 1.4;
+  color: #374151;
+}
+.option-btn:hover {
+  background-color: #f8fafc;
+  border-color: #93c5fd;
+}
+.option-btn.selected {
+  background-color: #eff6ff;
+  border-color: #3b82f6;
+  color: #1e40af;
+  font-weight: 600;
+}
+
+/* 动效 */
+.animate-scale-up {
+  animation: scaleUp 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes scaleUp {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-slide-left {
+  animation: slideLeft 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes slideLeft {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+/* 自定义轻量滚动条 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

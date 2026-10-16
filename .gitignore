@@ -1,0 +1,24 @@
+# 听力文件夹只保留 Cambridge-IELTS---Listening-04.zip
+听力/*
+!听力/Cambridge-IELTS---Listening-04.zip
+
+# 题目文件夹只保留 Cambridge-IELTS-04.pdf
+题目/*
+!题目/Cambridge-IELTS-04.pdf
+
+# 忽略临时解压的音频目录
+audio/
+
+# Python 缓存与环境
+__pycache__/
+*.py[cod]
+*$py.class
+*.log
+venv/
+.env
+
+# 编辑器与系统配置
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
